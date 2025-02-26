@@ -1,5 +1,4 @@
-# STAJ2023_backend
-2023 stajyerler java projesi
+# Marketing Application
 
 ---
 
