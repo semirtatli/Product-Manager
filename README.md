@@ -17,14 +17,18 @@
 * JDBC
 * Junit
 * Mockito
+* JWT
+* Docker
 
 ## Installation
 ---
-1. [Clone Repository Link](https://github.com/ilknuruysal/staj2023backend.git)
+1. [Clone Repository Link](https://github.com/semirtatli/Product-Manager.git)
 
-2. Maven ile dependency'leri indir
+2. Postgre Serverini kurup application.properties'ten konfigurasyonunu yap
 
-3. Postgre Serverini kurup application.properties'ten konfigurasyonunu yap
+3. Docker ile projeyi build et
+
+4. Docker run ile projeyi çalıştır
 
 ## Setup
 
