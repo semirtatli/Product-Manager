@@ -1,11 +1,11 @@
-# Marketing Application
+# Product Manager
 
 ---
 
 ## Description
 ---
 
-Market Takip Sisteminin backend kismi. Kullanici kaydi yapilip kayitli kullanici ile giris yapilabilir.
+Ürün Yönetim Sisteminin backend kismi. Kullanici kaydi yapilip kayitli kullanici ile giris yapilabilir.
 <br>Admin kategori ekleyip silebilir, urun ekleyebilir, guncelleyebilir, silebilir. Yapilan satislari goruntuleyebilir.
 
 ## Technologies
