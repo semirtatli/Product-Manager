@@ -2,6 +2,7 @@ package com.product_manager.ws.service;
 
 import com.product_manager.ws.model.Users;
 import com.product_manager.ws.repository.UserRepository;
+import jakarta.persistence.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import java.util.Optional;
 //Servis classını @Service annotationuyla belirtiyoruz
 //UserRepository deki data için encapsulation sağlıyor
 @Service
+@Cacheable
 public class UserService {
     //UserRepository icindeki metodlara UserService uzerinden erismek icin dependency injection
     @Autowired

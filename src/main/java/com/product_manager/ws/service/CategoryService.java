@@ -5,7 +5,9 @@ package com.product_manager.ws.service;
 
 import com.product_manager.ws.repository.CategoryRepository;
 import com.product_manager.ws.model.Category;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 
@@ -15,6 +17,7 @@ import java.util.Optional;
 //Servis classını @Service annotationuyla belirtiyoruz
 //UserRepository deki data için encapsulation sağlıyor
 @Service
+@Cacheable
 public class CategoryService {
     //CategoryRepository icindeki metodlara CategoryService uzerinden erismek icin dependency injection
     @Autowired
@@ -27,6 +30,8 @@ public class CategoryService {
         categoryRepository.save(category);
 
     }
+
+    @Cacheable("allCategorys")
     public List<Category> findAll(){
         return categoryRepository.findAll();
     }

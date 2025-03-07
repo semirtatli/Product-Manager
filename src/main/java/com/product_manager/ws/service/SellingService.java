@@ -3,6 +3,7 @@ package com.product_manager.ws.service;
 
 import com.product_manager.ws.model.Selling;
 import com.product_manager.ws.repository.SellingRepository;
+import jakarta.persistence.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.Optional;
 //Servis classını @Service annotationuyla belirtiyoruz
 //SellingRepository deki data için encapsulation sağlıyor
 @Service
+@Cacheable
 public class SellingService {
     //SellingRepository icindeki metodlara SellingService uzerinden erismek icin dependency injection
     @Autowired

@@ -14,7 +14,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    // Inject the secret key and expiration value from application.properties.
+    //application.propertiesten inject et
     @Value("${jwt.secret}")
     private String secretKey; // e.g., "MySuperSecretKeyForJwtExampleMySuperSecretKeyForJwtExample" (min 256 bits for HS256)
 

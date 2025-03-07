@@ -7,6 +7,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -14,8 +15,10 @@ import java.util.List;
 //Lombok kutuphanesi annotationu
 @Data
 //Database'de PRODUCT tablosu oluşturmak için kullanılan annotation
+//serializable olmadigi icin Redis cok sorun cikardi 
 @Entity
-public class Product {
+public class Product implements Serializable {
+    private static final long serialVersionUID = 1L;
 //  PRODUCT tablosunun primary key ini id olarak belirlemek için kullanılan annotation
     @Id
 //  id yi sistemin üretip güncellemesi için kullanılan annotation

@@ -34,7 +34,7 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(new GenericResponse("Invalid credentials"));
         }
-        // Generate a token using the user's actual role.
+
         String token = jwtService.generateToken(inDB.getUsername(), inDB.getRole().name());
         return ResponseEntity.ok(new AuthResponse(token));
     }

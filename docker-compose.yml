@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   app:
@@ -7,10 +7,14 @@ services:
       - "8080:8080"
     depends_on:
       - db
+      - redis
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=pgadmin
+
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
 
   db:
     image: postgres:14
@@ -21,6 +25,12 @@ services:
       - "5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
 
 volumes:
   postgres-data:

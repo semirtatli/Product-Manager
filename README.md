@@ -22,9 +22,17 @@
 ---
 1. [Clone Repository Link](https://github.com/ilknuruysal/staj2023backend.git)
 
-2. Maven ile dependency'leri indir
+2. Terminalden docker-compose build
 
-3. Postgre Serverini kurup application.properties'ten konfigurasyonunu yap
+3. Terminalden docker-compose up
+
+Not: Maven ile çalıştıracaksan(çalıştırma)
+Redis servisleri çakışıyor ya da ayarlayıp sadece maven kurabilsin
+
+### Maven için
+
+1. pom.xml deki dependencyleri kur(ctrl + shift + o)
+2. WsApplication u Run et.
 
 ## Setup
 

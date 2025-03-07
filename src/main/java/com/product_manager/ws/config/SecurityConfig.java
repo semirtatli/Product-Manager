@@ -23,12 +23,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                // Disable CSRF as we are using JWT (stateless)
+                // CSRF bu projede kullanmiyorum
                 .csrf(csrf -> csrf.disable())
 
-                // Set session management to stateless
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                //2 methodu test amacli tokensiz authorization olmadan calistiriyom
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/1.0/auth/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/1.0/users").permitAll()
@@ -37,7 +37,7 @@ public class SecurityConfig {
 
 
 
-                // Add the JWT filter before the default authentication filter
+
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
 

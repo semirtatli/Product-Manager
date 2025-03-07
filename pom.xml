@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.1.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.product_manager</groupId>
     <artifactId>ws</artifactId>
@@ -34,6 +34,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        Redis i Maven ile calistiracaksan commentten cikar-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -56,6 +67,8 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+<!--        In memory database olarak H2 kullanacaksan yorumdan çıkar-->
+<!--        application.properties i düzenlemeyi unutma-->
         <!--		<dependency>-->
         <!--			<groupId>com.h2database</groupId>-->
         <!--			<artifactId>h2</artifactId>-->
@@ -93,9 +106,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-
-
 
 
         <dependency>
